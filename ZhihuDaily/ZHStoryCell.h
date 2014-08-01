@@ -1,5 +1,5 @@
 //
-//  ZHViewController.h
+//  ZHStoryCell.h
 //  ZhihuDaily
 //
 //  Created by Madimo on 8/1/14.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZHViewController : UIViewController
+@class ZHStory;
+
+@interface ZHStoryCell : UITableViewCell
+
+@property (strong, nonatomic) ZHStory *story;
 
 @end

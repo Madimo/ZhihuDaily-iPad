@@ -15,7 +15,6 @@
 		D88CDBA4198B4740008DCEFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBA3198B4740008DCEFF /* main.m */; };
 		D88CDBA8198B4740008DCEFF /* ZHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */; };
 		D88CDBAB198B4740008DCEFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88CDBA9198B4740008DCEFF /* Main.storyboard */; };
-		D88CDBAE198B4740008DCEFF /* ZHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBAD198B4740008DCEFF /* ZHViewController.m */; };
 		D88CDBB0198B4740008DCEFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88CDBAF198B4740008DCEFF /* Images.xcassets */; };
 		D88CDBB7198B4740008DCEFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CDBB6198B4740008DCEFF /* XCTest.framework */; };
 		D88CDBB8198B4740008DCEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CDB97198B4740008DCEFF /* Foundation.framework */; };
@@ -24,6 +23,10 @@
 		D88CDBC3198B4740008DCEFF /* ZhihuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBC2198B4740008DCEFF /* ZhihuDailyTests.m */; };
 		D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBCD198B48B2008DCEFF /* ZHClient.m */; };
 		D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD0198B4932008DCEFF /* ZHStory.m */; };
+		D88CDBD5198B49BF008DCEFF /* ZHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */; };
+		D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */; };
+		D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDA198B52FB008DCEFF /* NSString+Date.m */; };
+		D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDD198B5532008DCEFF /* NSDate+String.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,24 +47,30 @@
 		D88CDB99198B4740008DCEFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D88CDB9B198B4740008DCEFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D88CDB9F198B4740008DCEFF /* ZhihuDaily-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZhihuDaily-Info.plist"; sourceTree = "<group>"; };
-		D88CDBA1198B4740008DCEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D88CDBA3198B4740008DCEFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D88CDBA5198B4740008DCEFF /* ZhihuDaily-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Prefix.pch"; sourceTree = "<group>"; };
 		D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHAppDelegate.h; sourceTree = "<group>"; };
 		D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHAppDelegate.m; sourceTree = "<group>"; };
-		D88CDBAA198B4740008DCEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D88CDBAC198B4740008DCEFF /* ZHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHViewController.h; sourceTree = "<group>"; };
-		D88CDBAD198B4740008DCEFF /* ZHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHViewController.m; sourceTree = "<group>"; };
 		D88CDBAF198B4740008DCEFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D88CDBB5198B4740008DCEFF /* ZhihuDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhihuDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88CDBB6198B4740008DCEFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D88CDBBE198B4740008DCEFF /* ZhihuDailyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZhihuDailyTests-Info.plist"; sourceTree = "<group>"; };
-		D88CDBC0198B4740008DCEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D88CDBC2198B4740008DCEFF /* ZhihuDailyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhihuDailyTests.m; sourceTree = "<group>"; };
 		D88CDBCC198B48B2008DCEFF /* ZHClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHClient.h; sourceTree = "<group>"; };
 		D88CDBCD198B48B2008DCEFF /* ZHClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHClient.m; sourceTree = "<group>"; };
 		D88CDBCF198B4932008DCEFF /* ZHStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHStory.h; sourceTree = "<group>"; };
 		D88CDBD0198B4932008DCEFF /* ZHStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHStory.m; sourceTree = "<group>"; };
+		D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHMasterViewController.h; sourceTree = "<group>"; };
+		D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHMasterViewController.m; sourceTree = "<group>"; };
+		D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHStoryCell.h; sourceTree = "<group>"; };
+		D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHStoryCell.m; sourceTree = "<group>"; };
+		D88CDBD9198B52FB008DCEFF /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
+		D88CDBDA198B52FB008DCEFF /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
+		D88CDBDC198B5532008DCEFF /* NSDate+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
+		D88CDBDD198B5532008DCEFF /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
+		D88CDBDF198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		D88CDBE0198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D88CDBE1198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,14 +133,17 @@
 		D88CDB9D198B4740008DCEFF /* ZhihuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D88CDBE2198B5BA5008DCEFF /* Categories */,
 				D88CDBD2198B4959008DCEFF /* Models */,
 				D88CDBCC198B48B2008DCEFF /* ZHClient.h */,
 				D88CDBCD198B48B2008DCEFF /* ZHClient.m */,
 				D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */,
 				D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */,
 				D88CDBA9198B4740008DCEFF /* Main.storyboard */,
-				D88CDBAC198B4740008DCEFF /* ZHViewController.h */,
-				D88CDBAD198B4740008DCEFF /* ZHViewController.m */,
+				D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */,
+				D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */,
+				D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */,
+				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
 				D88CDBAF198B4740008DCEFF /* Images.xcassets */,
 				D88CDB9E198B4740008DCEFF /* Supporting Files */,
 			);
@@ -174,6 +186,17 @@
 				D88CDBD0198B4932008DCEFF /* ZHStory.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D88CDBE2198B5BA5008DCEFF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D88CDBDC198B5532008DCEFF /* NSDate+String.h */,
+				D88CDBDD198B5532008DCEFF /* NSDate+String.m */,
+				D88CDBD9198B52FB008DCEFF /* NSString+Date.h */,
+				D88CDBDA198B52FB008DCEFF /* NSString+Date.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +261,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D88CDB8B198B4740008DCEFF;
 			productRefGroup = D88CDB95198B4740008DCEFF /* Products */;
@@ -309,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D88CDBAE198B4740008DCEFF /* ZHViewController.m in Sources */,
 				D88CDBA8198B4740008DCEFF /* ZHAppDelegate.m in Sources */,
+				D88CDBD5198B49BF008DCEFF /* ZHMasterViewController.m in Sources */,
 				D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */,
+				D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */,
+				D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */,
 				D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */,
 				D88CDBA4198B4740008DCEFF /* main.m in Sources */,
+				D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +366,7 @@
 		D88CDBA0198B4740008DCEFF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D88CDBA1198B4740008DCEFF /* en */,
+				D88CDBE0198B59C9008DCEFF /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -347,7 +374,7 @@
 		D88CDBA9198B4740008DCEFF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D88CDBAA198B4740008DCEFF /* Base */,
+				D88CDBDF198B59C9008DCEFF /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -355,7 +382,7 @@
 		D88CDBBF198B4740008DCEFF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D88CDBC0198B4740008DCEFF /* en */,
+				D88CDBE1198B59C9008DCEFF /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

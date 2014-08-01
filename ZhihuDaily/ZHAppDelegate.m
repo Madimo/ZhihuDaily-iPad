@@ -7,12 +7,16 @@
 //
 
 #import "ZHAppDelegate.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 @implementation ZHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
     return YES;
 }
 							
