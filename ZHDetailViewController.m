@@ -10,12 +10,18 @@
 #import "ZHContentWebView.h"
 #import "ZHClient.h"
 
-@interface ZHDetailViewController () <UIWebViewDelegate>
+@interface ZHDetailViewController () <UISplitViewControllerDelegate, UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet ZHContentWebView *webview;
+@property (strong, nonatomic) UIScreenEdgePanGestureRecognizer *gestureRecognizer;
 @property (strong, nonatomic) ZHContent *content;
 @end
 
 @implementation ZHDetailViewController
+
+- (void)awakeFromNib
+{
+    self.splitViewController.delegate = self;
+}
 
 - (void)setStory:(ZHStory *)story
 {
@@ -36,6 +42,37 @@
                           failure:^(NSError *error) {
                               
                           }];
+}
+
+#pragma mark - UISplitViewControllerDelegate
+
+- (BOOL)splitViewController:(UISplitViewController *)svc
+   shouldHideViewController:(UIViewController *)vc
+              inOrientation:(UIInterfaceOrientation)orientation
+{
+    return UIInterfaceOrientationIsPortrait(orientation);
+}
+
+- (void)splitViewController:(UISplitViewController *)svc
+     willShowViewController:(UIViewController *)aViewController
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    if (self.gestureRecognizer) {
+        [self.view removeGestureRecognizer:self.gestureRecognizer];
+        self.gestureRecognizer = nil;
+    }
+}
+
+- (void)splitViewController:(UISplitViewController *)svc
+     willHideViewController:(UIViewController *)aViewController
+          withBarButtonItem:(UIBarButtonItem *)barButtonItem
+       forPopoverController:(UIPopoverController *)pc
+{
+    if (!self.gestureRecognizer) {
+        self.gestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:barButtonItem
+                                                                                   action:barButtonItem.action];
+        [self.view addGestureRecognizer:self.gestureRecognizer];
+    }
 }
 
 @end
