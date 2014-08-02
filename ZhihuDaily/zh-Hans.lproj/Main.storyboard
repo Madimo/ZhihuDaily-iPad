@@ -25,18 +25,39 @@
                                     <outlet property="delegate" destination="AdS-73-MvU" id="2l9-nU-cN3"/>
                                 </connections>
                             </webView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsi-4m-Sws">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QZ1-DD-SpW">
+                                        <rect key="frame" x="366" y="462" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" white="0.30203581200000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="QZ1-DD-SpW" secondAttribute="centerX" id="l2F-cs-PYV"/>
+                                    <constraint firstAttribute="centerY" secondItem="QZ1-DD-SpW" secondAttribute="centerY" id="r95-Ic-dub"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xd2-xT-JF1" firstAttribute="leading" secondItem="XzQ-fA-mmO" secondAttribute="leading" id="Ofj-NL-xDP"/>
+                            <constraint firstItem="hsi-4m-Sws" firstAttribute="top" secondItem="g0L-gk-Dvv" secondAttribute="bottom" id="QSN-7W-0ip"/>
                             <constraint firstItem="ntV-Dj-KuJ" firstAttribute="top" secondItem="Xd2-xT-JF1" secondAttribute="bottom" id="dxI-9o-2e0"/>
+                            <constraint firstItem="ntV-Dj-KuJ" firstAttribute="top" secondItem="hsi-4m-Sws" secondAttribute="bottom" id="gtK-6C-frx"/>
+                            <constraint firstAttribute="trailing" secondItem="hsi-4m-Sws" secondAttribute="trailing" id="mAJ-wH-ECA"/>
                             <constraint firstItem="Xd2-xT-JF1" firstAttribute="top" secondItem="XzQ-fA-mmO" secondAttribute="top" id="nVe-HQ-gdf"/>
                             <constraint firstAttribute="trailing" secondItem="Xd2-xT-JF1" secondAttribute="trailing" id="oZP-wg-91a"/>
+                            <constraint firstItem="hsi-4m-Sws" firstAttribute="leading" secondItem="XzQ-fA-mmO" secondAttribute="leading" id="wdG-mz-yY3"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PzK-O1-Ign"/>
                     <connections>
+                        <outlet property="loadingMaskView" destination="hsi-4m-Sws" id="AeZ-5i-TNl"/>
                         <outlet property="webview" destination="Xd2-xT-JF1" id="RXW-uq-79R"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,8 @@
 
 @interface ZHDetailViewController () <UISplitViewControllerDelegate, UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet ZHContentWebView *webview;
+@property (weak, nonatomic) IBOutlet UIView *loadingMaskView;
+@property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) ZHContent *content;
 @end
 
@@ -21,6 +23,7 @@
 - (void)awakeFromNib
 {
     self.splitViewController.delegate = self;
+    [self.view bringSubviewToFront:self.loadingMaskView];
 }
 
 - (void)setStory:(ZHStory *)story
@@ -34,15 +37,20 @@
 
 - (void)refresh
 {
+    self.loadingMaskView.hidden = NO;
+    
+    [self.task cancel];
+    
     ZHClient *client = [ZHClient client];
-    [client getContentWithStoryId:self.story.storyId
-                          success:^(ZHContent *content) {
-                              self.content = content;
-                              [self.webview render:content];
-                          }
-                          failure:^(NSError *error) {
-                              
-                          }];
+    self.task = [client getContentWithStoryId:self.story.storyId
+                                      success:^(ZHContent *content) {
+                                          self.content = content;
+                                          [self.webview render:content];
+                                          self.loadingMaskView.hidden = YES;
+                                      }
+                                      failure:^(NSError *error) {
+                                          self.loadingMaskView.hidden = YES;
+                                      }];
 }
 
 #pragma mark - UIWebViewDelegate

@@ -202,6 +202,9 @@ ol {
   float: right;
   margin-top: 2px;
 }
+.content-inner {
+    min-height: 100%;
+}
 .content {
   color: #444;
   line-height: 1.6em;
