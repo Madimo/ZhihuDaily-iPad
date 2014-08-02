@@ -16,11 +16,6 @@
 		D88CDBA8198B4740008DCEFF /* ZHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */; };
 		D88CDBAB198B4740008DCEFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88CDBA9198B4740008DCEFF /* Main.storyboard */; };
 		D88CDBB0198B4740008DCEFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88CDBAF198B4740008DCEFF /* Images.xcassets */; };
-		D88CDBB7198B4740008DCEFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CDBB6198B4740008DCEFF /* XCTest.framework */; };
-		D88CDBB8198B4740008DCEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CDB97198B4740008DCEFF /* Foundation.framework */; };
-		D88CDBB9198B4740008DCEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88CDB9B198B4740008DCEFF /* UIKit.framework */; };
-		D88CDBC1198B4740008DCEFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D88CDBBF198B4740008DCEFF /* InfoPlist.strings */; };
-		D88CDBC3198B4740008DCEFF /* ZhihuDailyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBC2198B4740008DCEFF /* ZhihuDailyTests.m */; };
 		D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBCD198B48B2008DCEFF /* ZHClient.m */; };
 		D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD0198B4932008DCEFF /* ZHStory.m */; };
 		D88CDBD5198B49BF008DCEFF /* ZHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */; };
@@ -35,16 +30,6 @@
 		D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F7198D0DA30015166F /* ContentScript.js */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D88CDBBA198B4740008DCEFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D88CDB8C198B4740008DCEFF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D88CDB93198B4740008DCEFF;
-			remoteInfo = ZhihuDaily;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		355A495E302343728B835054 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A994891ECB494671A5F72DD4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -58,10 +43,7 @@
 		D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHAppDelegate.h; sourceTree = "<group>"; };
 		D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHAppDelegate.m; sourceTree = "<group>"; };
 		D88CDBAF198B4740008DCEFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D88CDBB5198B4740008DCEFF /* ZhihuDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhihuDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88CDBB6198B4740008DCEFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D88CDBBE198B4740008DCEFF /* ZhihuDailyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZhihuDailyTests-Info.plist"; sourceTree = "<group>"; };
-		D88CDBC2198B4740008DCEFF /* ZhihuDailyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhihuDailyTests.m; sourceTree = "<group>"; };
 		D88CDBCC198B48B2008DCEFF /* ZHClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHClient.h; sourceTree = "<group>"; };
 		D88CDBCD198B48B2008DCEFF /* ZHClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHClient.m; sourceTree = "<group>"; };
 		D88CDBCF198B4932008DCEFF /* ZHStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHStory.h; sourceTree = "<group>"; };
@@ -76,7 +58,6 @@
 		D88CDBDD198B5532008DCEFF /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
 		D88CDBDF198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D88CDBE0198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		D88CDBE1198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHDetailViewController.h; path = ../ZHDetailViewController.h; sourceTree = "<group>"; };
 		D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHDetailViewController.m; path = ../ZHDetailViewController.m; sourceTree = "<group>"; };
 		D89EC4ED198CBFD40015166F /* ZHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContent.h; sourceTree = "<group>"; };
@@ -100,16 +81,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D88CDBB2198B4740008DCEFF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D88CDBB7198B4740008DCEFF /* XCTest.framework in Frameworks */,
-				D88CDBB9198B4740008DCEFF /* UIKit.framework in Frameworks */,
-				D88CDBB8198B4740008DCEFF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				D88CDB9D198B4740008DCEFF /* ZhihuDaily */,
-				D88CDBBC198B4740008DCEFF /* ZhihuDailyTests */,
 				D88CDB96198B4740008DCEFF /* Frameworks */,
 				D88CDB95198B4740008DCEFF /* Products */,
 				A994891ECB494671A5F72DD4 /* Pods.xcconfig */,
@@ -128,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				D88CDB94198B4740008DCEFF /* ZhihuDaily.app */,
-				D88CDBB5198B4740008DCEFF /* ZhihuDailyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,24 +141,6 @@
 				D88CDBA0198B4740008DCEFF /* InfoPlist.strings */,
 				D88CDBA3198B4740008DCEFF /* main.m */,
 				D88CDBA5198B4740008DCEFF /* ZhihuDaily-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D88CDBBC198B4740008DCEFF /* ZhihuDailyTests */ = {
-			isa = PBXGroup;
-			children = (
-				D88CDBC2198B4740008DCEFF /* ZhihuDailyTests.m */,
-				D88CDBBD198B4740008DCEFF /* Supporting Files */,
-			);
-			path = ZhihuDailyTests;
-			sourceTree = "<group>";
-		};
-		D88CDBBD198B4740008DCEFF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D88CDBBE198B4740008DCEFF /* ZhihuDailyTests-Info.plist */,
-				D88CDBBF198B4740008DCEFF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,24 +220,6 @@
 			productReference = D88CDB94198B4740008DCEFF /* ZhihuDaily.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D88CDBB4198B4740008DCEFF /* ZhihuDailyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D88CDBC9198B4740008DCEFF /* Build configuration list for PBXNativeTarget "ZhihuDailyTests" */;
-			buildPhases = (
-				D88CDBB1198B4740008DCEFF /* Sources */,
-				D88CDBB2198B4740008DCEFF /* Frameworks */,
-				D88CDBB3198B4740008DCEFF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D88CDBBB198B4740008DCEFF /* PBXTargetDependency */,
-			);
-			name = ZhihuDailyTests;
-			productName = ZhihuDailyTests;
-			productReference = D88CDBB5198B4740008DCEFF /* ZhihuDailyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,9 +232,6 @@
 				TargetAttributes = {
 					D88CDB93198B4740008DCEFF = {
 						DevelopmentTeam = GKXU2E4SX7;
-					};
-					D88CDBB4198B4740008DCEFF = {
-						TestTargetID = D88CDB93198B4740008DCEFF;
 					};
 				};
 			};
@@ -320,7 +250,6 @@
 			projectRoot = "";
 			targets = (
 				D88CDB93198B4740008DCEFF /* ZhihuDaily */,
-				D88CDBB4198B4740008DCEFF /* ZhihuDailyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,14 +265,6 @@
 				D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */,
 				D89EC4F6198D08490015166F /* ContentStyle.css in Resources */,
 				D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D88CDBB3198B4740008DCEFF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D88CDBC1198B4740008DCEFF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,23 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D88CDBB1198B4740008DCEFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D88CDBC3198B4740008DCEFF /* ZhihuDailyTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D88CDBBB198B4740008DCEFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D88CDB93198B4740008DCEFF /* ZhihuDaily */;
-			targetProxy = D88CDBBA198B4740008DCEFF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D88CDBA0198B4740008DCEFF /* InfoPlist.strings */ = {
@@ -434,14 +339,6 @@
 				D88CDBDF198B59C9008DCEFF /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D88CDBBF198B4740008DCEFF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D88CDBE1198B59C9008DCEFF /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -553,46 +450,6 @@
 			};
 			name = Release;
 		};
-		D88CDBCA198B4740008DCEFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZhihuDaily.app/ZhihuDaily";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ZhihuDaily/ZhihuDaily-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ZhihuDailyTests/ZhihuDailyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D88CDBCB198B4740008DCEFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZhihuDaily.app/ZhihuDaily";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ZhihuDaily/ZhihuDaily-Prefix.pch";
-				INFOPLIST_FILE = "ZhihuDailyTests/ZhihuDailyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,15 +467,6 @@
 			buildConfigurations = (
 				D88CDBC7198B4740008DCEFF /* Debug */,
 				D88CDBC8198B4740008DCEFF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D88CDBC9198B4740008DCEFF /* Build configuration list for PBXNativeTarget "ZhihuDailyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D88CDBCA198B4740008DCEFF /* Debug */,
-				D88CDBCB198B4740008DCEFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
