@@ -12,7 +12,6 @@
 
 @interface ZHDetailViewController () <UISplitViewControllerDelegate, UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet ZHContentWebView *webview;
-@property (strong, nonatomic) UIScreenEdgePanGestureRecognizer *gestureRecognizer;
 @property (strong, nonatomic) ZHContent *content;
 @end
 
@@ -45,6 +44,19 @@
                           }];
 }
 
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSString *url = request.URL.absoluteString;
+    
+    if ([url isEqualToString:@"about:blank"]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 #pragma mark - UISplitViewControllerDelegate
 
 - (BOOL)splitViewController:(UISplitViewController *)svc
@@ -58,10 +70,7 @@
      willShowViewController:(UIViewController *)aViewController
   invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    if (self.gestureRecognizer) {
-        [self.view removeGestureRecognizer:self.gestureRecognizer];
-        self.gestureRecognizer = nil;
-    }
+
 }
 
 - (void)splitViewController:(UISplitViewController *)svc
@@ -69,11 +78,7 @@
           withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc
 {
-    if (!self.gestureRecognizer) {
-        self.gestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:barButtonItem
-                                                                                   action:barButtonItem.action];
-        [self.view addGestureRecognizer:self.gestureRecognizer];
-    }
+
 }
 
 @end
