@@ -11,5 +11,7 @@
 @interface NSDate (String)
 
 - (NSString *)toString;
+- (NSString *)toDisplayString;
+- (NSString *)weekdayString;
 
 @end

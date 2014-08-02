@@ -139,6 +139,7 @@ ol {
 }
 .headline {
   border-bottom: 4px solid #f6f6f6;
+  display: none;
 }
 .headline-title.onlyheading {
   margin: 20px 0;
@@ -210,7 +211,8 @@ ol {
 .content img {
   max-width: 100%;
   display: block;
-  margin: 10px 0;
+  margin: 10px auto;
+  text-align: center;
 }
 .content img[src*="zhihu.com/equation"] {
   display: inline-block;

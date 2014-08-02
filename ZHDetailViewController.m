@@ -27,6 +27,7 @@
 {
     if (_story != story) {
         _story = story;
+        self.title = story.title;
         [self refresh];
     }
 }

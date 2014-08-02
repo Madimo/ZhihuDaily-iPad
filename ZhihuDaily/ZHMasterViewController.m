@@ -26,8 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
-    self.detailViewController = self.splitViewController.viewControllers.lastObject;
+    
+    UINavigationController *nc = self.splitViewController.viewControllers.lastObject;
+    self.detailViewController = nc.viewControllers.firstObject;
     
     self.dates = [NSMutableArray new];
     self.stories = [NSMutableDictionary new];
@@ -116,10 +117,17 @@
 {
     CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 30);
     UIView *view = [[UIView alloc] initWithFrame:frame];
+    view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.95];
+    
     UILabel *label = [[UILabel alloc] initWithFrame:view.bounds];
-    label.text = self.dates[section];
     label.textAlignment = NSTextAlignmentCenter;
+
+    NSDate *date = [self.dates[section] toDate];
+    NSString *weekdayString = [date weekdayString];
+    label.text = [NSString stringWithFormat:@"%@・%@", [date toDisplayString], weekdayString];
+    
     [view addSubview:label];
+    
     return view;
 }
 

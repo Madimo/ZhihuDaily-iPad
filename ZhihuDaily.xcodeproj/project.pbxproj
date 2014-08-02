@@ -148,19 +148,12 @@
 		D88CDB9D198B4740008DCEFF /* ZhihuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D89EC4FB198D21150015166F /* Libraries */,
 				D88CDBE2198B5BA5008DCEFF /* Categories */,
 				D88CDBD2198B4959008DCEFF /* Models */,
-				D88CDBCC198B48B2008DCEFF /* ZHClient.h */,
-				D88CDBCD198B48B2008DCEFF /* ZHClient.m */,
+				D89EC4FA198D20F80015166F /* Views */,
+				D89EC4FC198D212A0015166F /* Controllers */,
 				D88CDBA9198B4740008DCEFF /* Main.storyboard */,
-				D89EC4F0198CC61B0015166F /* ZHContentWebView.h */,
-				D89EC4F1198CC61B0015166F /* ZHContentWebView.m */,
-				D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */,
-				D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */,
-				D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */,
-				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
-				D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */,
-				D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */,
 				D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */,
 				D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */,
 				D88CDBAF198B4740008DCEFF /* Images.xcassets */,
@@ -221,6 +214,37 @@
 				D88CDBDA198B52FB008DCEFF /* NSString+Date.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		D89EC4FA198D20F80015166F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D89EC4F0198CC61B0015166F /* ZHContentWebView.h */,
+				D89EC4F1198CC61B0015166F /* ZHContentWebView.m */,
+				D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */,
+				D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D89EC4FB198D21150015166F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D88CDBCC198B48B2008DCEFF /* ZHClient.h */,
+				D88CDBCD198B48B2008DCEFF /* ZHClient.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D89EC4FC198D212A0015166F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */,
+				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
+				D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */,
+				D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
