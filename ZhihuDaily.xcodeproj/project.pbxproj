@@ -28,6 +28,8 @@
 		D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F3198CC6F10015166F /* ContentHTML.html */; };
 		D89EC4F6198D08490015166F /* ContentStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F5198D08490015166F /* ContentStyle.css */; };
 		D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F7198D0DA30015166F /* ContentScript.js */; };
+		D89EC4FF198D24650015166F /* ZHWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4FE198D24650015166F /* ZHWebView.m */; };
+		D89EC502198D24F60015166F /* ZHWebBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC501198D24F60015166F /* ZHWebBrowserController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,10 @@
 		D89EC4F3198CC6F10015166F /* ContentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ContentHTML.html; sourceTree = "<group>"; };
 		D89EC4F5198D08490015166F /* ContentStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ContentStyle.css; sourceTree = "<group>"; };
 		D89EC4F7198D0DA30015166F /* ContentScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ContentScript.js; sourceTree = "<group>"; };
+		D89EC4FD198D24650015166F /* ZHWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHWebView.h; sourceTree = "<group>"; };
+		D89EC4FE198D24650015166F /* ZHWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHWebView.m; sourceTree = "<group>"; };
+		D89EC500198D24F60015166F /* ZHWebBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHWebBrowserController.h; sourceTree = "<group>"; };
+		D89EC501198D24F60015166F /* ZHWebBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHWebBrowserController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,8 @@
 			children = (
 				D89EC4F0198CC61B0015166F /* ZHContentWebView.h */,
 				D89EC4F1198CC61B0015166F /* ZHContentWebView.m */,
+				D89EC4FD198D24650015166F /* ZHWebView.h */,
+				D89EC4FE198D24650015166F /* ZHWebView.m */,
 				D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */,
 				D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */,
 			);
@@ -194,6 +202,8 @@
 				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
 				D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */,
 				D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */,
+				D89EC500198D24F60015166F /* ZHWebBrowserController.h */,
+				D89EC501198D24F60015166F /* ZHWebBrowserController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +323,8 @@
 				D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */,
 				D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */,
 				D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */,
+				D89EC502198D24F60015166F /* ZHWebBrowserController.m in Sources */,
+				D89EC4FF198D24650015166F /* ZHWebView.m in Sources */,
 				D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */,
 				D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */,
 				D89EC4EC198CB7C90015166F /* ZHDetailViewController.m in Sources */,

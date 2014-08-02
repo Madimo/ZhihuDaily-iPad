@@ -120,9 +120,7 @@
                                range:NSMakeRange(0, HTML.length)];
     
     // load
-    
-    NSURL *baseUrl = [NSURL URLWithString:content.shareUrl];
-    [self loadHTMLString:HTML baseURL:baseUrl];
+    [self loadHTMLString:HTML baseURL:nil];
 }
 
 @end

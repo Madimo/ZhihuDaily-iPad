@@ -7,6 +7,7 @@
 //
 
 #import "ZHDetailViewController.h"
+#import "ZHWebBrowserController.h"
 #import "ZHContentWebView.h"
 #import "ZHClient.h"
 
@@ -53,6 +54,10 @@
     if ([url isEqualToString:@"about:blank"]) {
         return YES;
     }
+    
+    ZHWebBrowserController *wbc = [[ZHWebBrowserController alloc] initWithURL:url];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:wbc];
+    [self.splitViewController presentViewController:nc animated:YES completion:nil];
     
     return NO;
 }

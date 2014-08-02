@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                                 <connections>
-                                    <outlet property="delegate" destination="XzQ-fA-mmO" id="94j-fp-INm"/>
+                                    <outlet property="delegate" destination="AdS-73-MvU" id="2l9-nU-cN3"/>
                                 </connections>
                             </webView>
                         </subviews>

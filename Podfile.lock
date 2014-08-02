@@ -20,16 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - OpenInChrome (0.0.1)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
 
 DEPENDENCIES:
   - AFNetworking
+  - OpenInChrome
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  OpenInChrome: b7c73ddf8fe0a1788dc0549c3c4c70e3c84da578
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
 
 COCOAPODS: 0.33.1
