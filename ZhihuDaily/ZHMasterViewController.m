@@ -74,12 +74,8 @@
     
     [self.footerActivityIndicator startAnimating];
     
-    NSDate *date = [((NSString *)[self.dates lastObject]) toDate];
-    NSDate *loadDate = [NSDate dateWithTimeInterval:-(24 * 3600) sinceDate:date];
-    NSString *loadDateString = [loadDate toString];
-    
     ZHClient *client = [ZHClient client];
-    [client getPastStoriesWithDate:loadDateString
+    [client getPastStoriesWithDate:[self.dates lastObject]
                            success:^(NSString *date, NSArray *stories) {
                                [self.dates addObject:date];
                                [self.stories setObject:stories forKey:date];
