@@ -10,8 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         
-        {{ stylesheet }}
-        {{ javascript }}
+        <style>
+            {{ stylesheet }}
+        </style>
+        
+        <script type="text/javascript">
+            {{ javascript }}
+        </script>
+        
     </head>
     <body>
         {{ body }}

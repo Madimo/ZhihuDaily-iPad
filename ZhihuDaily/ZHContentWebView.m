@@ -11,6 +11,8 @@
 
 @interface ZHContentWebView ()
 @property (strong, nonatomic) NSString *contentHTML;
+@property (strong, nonatomic) NSString *contentStyle;
+@property (strong, nonatomic) NSString *contentScript;
 @end
 
 @implementation ZHContentWebView
@@ -44,8 +46,22 @@
 
 - (void)commonInit
 {    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ContentHTML" ofType:@"html"];
-    self.contentHTML = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSString *path;
+    
+    path = [[NSBundle mainBundle] pathForResource:@"ContentHTML" ofType:@"html"];
+    self.contentHTML = [NSString stringWithContentsOfFile:path
+                                                 encoding:NSUTF8StringEncoding
+                                                    error:nil];
+    
+    path = [[NSBundle mainBundle] pathForResource:@"ContentStyle" ofType:@"css"];
+    self.contentStyle = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:nil];
+    
+    path = [[NSBundle mainBundle] pathForResource:@"ContentScript" ofType:@"js"];
+    self.contentScript = [NSString stringWithContentsOfFile:path
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:nil];
 }
 
 - (void)render:(ZHContent *)content
@@ -54,35 +70,45 @@
     
     // replace css
     
-    NSMutableString *cssString;
-
-    if (content.css.count) {
-        cssString = [NSMutableString new];
-        for (NSString *url in content.css) {
-            static NSString *linkString = @"<link rel=\"stylesheet\" type=\"text/css\" href=\"%@\" />\n";
-            [cssString appendFormat:linkString, url];
-        }
-    }
+//    NSMutableString *cssString;
+//
+//    if (content.css.count) {
+//        cssString = [NSMutableString new];
+//        for (NSString *url in content.css) {
+//            static NSString *linkString = @"<link rel=\"stylesheet\" type=\"text/css\" href=\"%@\" />\n";
+//            [cssString appendFormat:linkString, url];
+//        }
+//    }
+//    
+//    [HTML replaceOccurrencesOfString:@"{{ stylesheet }}"
+//                          withString:cssString ? cssString : @" "
+//                             options:NSLiteralSearch
+//                               range:NSMakeRange(0, HTML.length)];
     
     [HTML replaceOccurrencesOfString:@"{{ stylesheet }}"
-                          withString:cssString ? cssString : @" "
+                          withString:self.contentStyle
                              options:NSLiteralSearch
                                range:NSMakeRange(0, HTML.length)];
     
     // replace javascript
     
-    NSMutableString *jsString;
-    
-    if (content.js.count) {
-        jsString = [NSMutableString new];
-        for (NSString *url in content.js) {
-            static NSString *linkString = @"<script type=\"text/javascript\" src=\"%@\"></script>\n";
-            [jsString appendFormat:linkString, url];
-        }
-    }
+//    NSMutableString *jsString;
+//    
+//    if (content.js.count) {
+//        jsString = [NSMutableString new];
+//        for (NSString *url in content.js) {
+//            static NSString *linkString = @"<script type=\"text/javascript\" src=\"%@\"></script>\n";
+//            [jsString appendFormat:linkString, url];
+//        }
+//    }
+//    
+//    [HTML replaceOccurrencesOfString:@"{{ javascript }}"
+//                          withString:jsString ? jsString : @" "
+//                             options:NSLiteralSearch
+//                               range:NSMakeRange(0, HTML.length)];
     
     [HTML replaceOccurrencesOfString:@"{{ javascript }}"
-                          withString:jsString ? jsString : @" "
+                          withString:self.contentScript
                              options:NSLiteralSearch
                                range:NSMakeRange(0, HTML.length)];
     

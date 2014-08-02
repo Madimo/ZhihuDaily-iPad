@@ -31,6 +31,8 @@
 		D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4EE198CBFD40015166F /* ZHContent.m */; };
 		D89EC4F2198CC61B0015166F /* ZHContentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4F1198CC61B0015166F /* ZHContentWebView.m */; };
 		D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F3198CC6F10015166F /* ContentHTML.html */; };
+		D89EC4F6198D08490015166F /* ContentStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F5198D08490015166F /* ContentStyle.css */; };
+		D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F7198D0DA30015166F /* ContentScript.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		D89EC4F0198CC61B0015166F /* ZHContentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContentWebView.h; sourceTree = "<group>"; };
 		D89EC4F1198CC61B0015166F /* ZHContentWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHContentWebView.m; sourceTree = "<group>"; };
 		D89EC4F3198CC6F10015166F /* ContentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ContentHTML.html; sourceTree = "<group>"; };
+		D89EC4F5198D08490015166F /* ContentStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ContentStyle.css; sourceTree = "<group>"; };
+		D89EC4F7198D0DA30015166F /* ContentScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ContentScript.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				D89EC4F3198CC6F10015166F /* ContentHTML.html */,
+				D89EC4F5198D08490015166F /* ContentStyle.css */,
+				D89EC4F7198D0DA30015166F /* ContentScript.js */,
 				D88CDB9F198B4740008DCEFF /* ZhihuDaily-Info.plist */,
 				D88CDBA0198B4740008DCEFF /* InfoPlist.strings */,
 				D88CDBA3198B4740008DCEFF /* main.m */,
@@ -304,6 +310,8 @@
 				D88CDBA2198B4740008DCEFF /* InfoPlist.strings in Resources */,
 				D88CDBAB198B4740008DCEFF /* Main.storyboard in Resources */,
 				D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */,
+				D89EC4F6198D08490015166F /* ContentStyle.css in Resources */,
+				D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
