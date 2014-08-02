@@ -22,7 +22,6 @@
 		D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */; };
 		D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDA198B52FB008DCEFF /* NSString+Date.m */; };
 		D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDD198B5532008DCEFF /* NSDate+String.m */; };
-		D89EC4EC198CB7C90015166F /* ZHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */; };
 		D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4EE198CBFD40015166F /* ZHContent.m */; };
 		D89EC4F2198CC61B0015166F /* ZHContentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4F1198CC61B0015166F /* ZHContentWebView.m */; };
 		D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F3198CC6F10015166F /* ContentHTML.html */; };
@@ -30,6 +29,7 @@
 		D89EC4F9198D0EED0015166F /* ContentScript.js in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F7198D0DA30015166F /* ContentScript.js */; };
 		D89EC4FF198D24650015166F /* ZHWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4FE198D24650015166F /* ZHWebView.m */; };
 		D89EC502198D24F60015166F /* ZHWebBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC501198D24F60015166F /* ZHWebBrowserController.m */; };
+		D89EC505198D4D7E0015166F /* ZHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC504198D4D7E0015166F /* ZHDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +60,6 @@
 		D88CDBDD198B5532008DCEFF /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
 		D88CDBDF198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D88CDBE0198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHDetailViewController.h; path = ../ZHDetailViewController.h; sourceTree = "<group>"; };
-		D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHDetailViewController.m; path = ../ZHDetailViewController.m; sourceTree = "<group>"; };
 		D89EC4ED198CBFD40015166F /* ZHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContent.h; sourceTree = "<group>"; };
 		D89EC4EE198CBFD40015166F /* ZHContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHContent.m; sourceTree = "<group>"; };
 		D89EC4F0198CC61B0015166F /* ZHContentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContentWebView.h; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		D89EC4FE198D24650015166F /* ZHWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHWebView.m; sourceTree = "<group>"; };
 		D89EC500198D24F60015166F /* ZHWebBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHWebBrowserController.h; sourceTree = "<group>"; };
 		D89EC501198D24F60015166F /* ZHWebBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHWebBrowserController.m; sourceTree = "<group>"; };
+		D89EC503198D4D7E0015166F /* ZHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHDetailViewController.h; sourceTree = "<group>"; };
+		D89EC504198D4D7E0015166F /* ZHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +200,8 @@
 			children = (
 				D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */,
 				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
-				D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */,
-				D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */,
+				D89EC503198D4D7E0015166F /* ZHDetailViewController.h */,
+				D89EC504198D4D7E0015166F /* ZHDetailViewController.m */,
 				D89EC500198D24F60015166F /* ZHWebBrowserController.h */,
 				D89EC501198D24F60015166F /* ZHWebBrowserController.m */,
 			);
@@ -327,9 +327,9 @@
 				D89EC4FF198D24650015166F /* ZHWebView.m in Sources */,
 				D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */,
 				D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */,
-				D89EC4EC198CB7C90015166F /* ZHDetailViewController.m in Sources */,
 				D88CDBA4198B4740008DCEFF /* main.m in Sources */,
 				D89EC4F2198CC61B0015166F /* ZHContentWebView.m in Sources */,
+				D89EC505198D4D7E0015166F /* ZHDetailViewController.m in Sources */,
 				D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
