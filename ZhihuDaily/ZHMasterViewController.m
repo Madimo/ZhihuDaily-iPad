@@ -7,12 +7,14 @@
 //
 
 #import "ZHMasterViewController.h"
+#import "ZHDetailViewController.h"
 #import "NSString+Date.h"
 #import "NSDate+String.h"
 #import "ZHClient.h"
 #import "ZHStoryCell.h"
 
 @interface ZHMasterViewController ()
+@property (weak, nonatomic) ZHDetailViewController *detailViewController;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *footerActivityIndicator;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) NSMutableArray *dates;
@@ -24,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        
+    self.detailViewController = self.splitViewController.viewControllers.lastObject;
     
     self.dates = [NSMutableArray new];
     self.stories = [NSMutableDictionary new];
@@ -127,6 +131,12 @@
     cell.story = story;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ZHStory *story = self.stories[self.dates[indexPath.section]][indexPath.row];
+    [self.detailViewController setStory:story];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

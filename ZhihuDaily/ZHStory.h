@@ -10,12 +10,12 @@
 
 @interface ZHStory : NSObject
 
+@property (strong, nonatomic) NSString *storyId;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *shareUrl;
 @property (strong, nonatomic) NSString *GaPrefix;
 @property (strong, nonatomic) NSArray *imageUrls;
 @property (nonatomic) NSInteger type;
-@property (nonatomic) NSInteger sid;
 
 + (instancetype)storyWithStoryDict:(NSDictionary *)dict;
 - (instancetype)initWithStoryDict:(NSDictionary *)dict;

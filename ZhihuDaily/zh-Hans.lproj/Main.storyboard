@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="S1I-p9-7WC">
             <objects>
-                <viewController id="AdS-73-MvU" sceneMemberID="viewController">
+                <viewController id="AdS-73-MvU" customClass="ZHDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g0L-gk-Dvv"/>
                         <viewControllerLayoutGuide type="bottom" id="ntV-Dj-KuJ"/>
@@ -15,9 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="XzQ-fA-mmO">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd2-xT-JF1" customClass="ZHContentWebView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XzQ-fA-mmO" id="94j-fp-INm"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xd2-xT-JF1" firstAttribute="leading" secondItem="XzQ-fA-mmO" secondAttribute="leading" id="Ofj-NL-xDP"/>
+                            <constraint firstItem="ntV-Dj-KuJ" firstAttribute="top" secondItem="Xd2-xT-JF1" secondAttribute="bottom" id="dxI-9o-2e0"/>
+                            <constraint firstItem="Xd2-xT-JF1" firstAttribute="top" secondItem="XzQ-fA-mmO" secondAttribute="top" id="nVe-HQ-gdf"/>
+                            <constraint firstAttribute="trailing" secondItem="Xd2-xT-JF1" secondAttribute="trailing" id="oZP-wg-91a"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="webview" destination="Xd2-xT-JF1" id="RXW-uq-79R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDZ-b2-Scw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

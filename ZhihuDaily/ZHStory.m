@@ -14,11 +14,11 @@
 {
     self = [super init];
     if (self) {
+        self.storyId = [NSString stringWithFormat:@"%@", dict[@"id"]];
         self.title = dict[@"title"];
         self.shareUrl = dict[@"share_url"];
         self.GaPrefix = dict[@"ga_prefix"];
         self.type = [dict[@"type"] integerValue];
-        self.sid = [dict[@"id"] integerValue];
         
         NSMutableArray *imageUrls = [NSMutableArray new];
         for (NSString *url in dict[@"images"]) {

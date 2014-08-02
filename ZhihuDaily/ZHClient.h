@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ZHStory.h"
+#import "ZHContent.h"
 
 typedef NS_ENUM(NSUInteger, StartImageSize) {
     StartImageSize320by432,
@@ -31,5 +32,9 @@ typedef NS_ENUM(NSUInteger, StartImageSize) {
 - (NSURLSessionDataTask *)getPastStoriesWithDate:(NSString *)date
                                          success:(void (^)(NSString *date, NSArray *stories))success
                                          failure:(void (^)(NSError *error))failure;
+
+- (NSURLSessionDataTask *)getContentWithStoryId:(NSString *)storyId
+                                        success:(void (^)(ZHContent *content))success
+                                        failure:(void (^)(NSError *error))failure;
 
 @end

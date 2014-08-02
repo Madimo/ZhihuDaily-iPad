@@ -115,6 +115,25 @@
                  }];
 }
 
+- (NSURLSessionDataTask *)getContentWithStoryId:(NSString *)storyId
+                                        success:(void (^)(ZHContent *content))success
+                                        failure:(void (^)(NSError *error))failure
+{
+    return [self getPath:[NSString stringWithFormat:@"/news/%@", storyId]
+              parameters:nil
+                 success:^(NSURLSessionDataTask *task, NSDictionary *responseDict) {
+                     if (success) {
+                         ZHContent *content = [ZHContent contentWithContentDict:responseDict];
+                         success(content);
+                     }
+                 }
+                 failure:^(NSURLSessionDataTask *task, NSError *error) {
+                     if (failure) {
+                         failure(error);
+                     }
+                 }];
+}
+
 #pragma mark - Singleton
 
 + (instancetype)client

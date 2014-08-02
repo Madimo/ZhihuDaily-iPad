@@ -27,6 +27,10 @@
 		D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */; };
 		D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDA198B52FB008DCEFF /* NSString+Date.m */; };
 		D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = D88CDBDD198B5532008DCEFF /* NSDate+String.m */; };
+		D89EC4EC198CB7C90015166F /* ZHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */; };
+		D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4EE198CBFD40015166F /* ZHContent.m */; };
+		D89EC4F2198CC61B0015166F /* ZHContentWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC4F1198CC61B0015166F /* ZHContentWebView.m */; };
+		D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = D89EC4F3198CC6F10015166F /* ContentHTML.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,13 @@
 		D88CDBDF198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		D88CDBE0198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D88CDBE1198B59C9008DCEFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHDetailViewController.h; path = ../ZHDetailViewController.h; sourceTree = "<group>"; };
+		D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHDetailViewController.m; path = ../ZHDetailViewController.m; sourceTree = "<group>"; };
+		D89EC4ED198CBFD40015166F /* ZHContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContent.h; sourceTree = "<group>"; };
+		D89EC4EE198CBFD40015166F /* ZHContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHContent.m; sourceTree = "<group>"; };
+		D89EC4F0198CC61B0015166F /* ZHContentWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHContentWebView.h; sourceTree = "<group>"; };
+		D89EC4F1198CC61B0015166F /* ZHContentWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHContentWebView.m; sourceTree = "<group>"; };
+		D89EC4F3198CC6F10015166F /* ContentHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ContentHTML.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,13 +148,17 @@
 				D88CDBD2198B4959008DCEFF /* Models */,
 				D88CDBCC198B48B2008DCEFF /* ZHClient.h */,
 				D88CDBCD198B48B2008DCEFF /* ZHClient.m */,
-				D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */,
-				D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */,
 				D88CDBA9198B4740008DCEFF /* Main.storyboard */,
+				D89EC4F0198CC61B0015166F /* ZHContentWebView.h */,
+				D89EC4F1198CC61B0015166F /* ZHContentWebView.m */,
 				D88CDBD6198B49E3008DCEFF /* ZHStoryCell.h */,
 				D88CDBD7198B49E3008DCEFF /* ZHStoryCell.m */,
 				D88CDBD3198B49BF008DCEFF /* ZHMasterViewController.h */,
 				D88CDBD4198B49BF008DCEFF /* ZHMasterViewController.m */,
+				D89EC4EA198CB7C90015166F /* ZHDetailViewController.h */,
+				D89EC4EB198CB7C90015166F /* ZHDetailViewController.m */,
+				D88CDBA6198B4740008DCEFF /* ZHAppDelegate.h */,
+				D88CDBA7198B4740008DCEFF /* ZHAppDelegate.m */,
 				D88CDBAF198B4740008DCEFF /* Images.xcassets */,
 				D88CDB9E198B4740008DCEFF /* Supporting Files */,
 			);
@@ -153,6 +168,7 @@
 		D88CDB9E198B4740008DCEFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D89EC4F3198CC6F10015166F /* ContentHTML.html */,
 				D88CDB9F198B4740008DCEFF /* ZhihuDaily-Info.plist */,
 				D88CDBA0198B4740008DCEFF /* InfoPlist.strings */,
 				D88CDBA3198B4740008DCEFF /* main.m */,
@@ -184,6 +200,8 @@
 			children = (
 				D88CDBCF198B4932008DCEFF /* ZHStory.h */,
 				D88CDBD0198B4932008DCEFF /* ZHStory.m */,
+				D89EC4ED198CBFD40015166F /* ZHContent.h */,
+				D89EC4EE198CBFD40015166F /* ZHContent.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -249,6 +267,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Madimo;
 				TargetAttributes = {
+					D88CDB93198B4740008DCEFF = {
+						DevelopmentTeam = GKXU2E4SX7;
+					};
 					D88CDBB4198B4740008DCEFF = {
 						TestTargetID = D88CDB93198B4740008DCEFF;
 					};
@@ -282,6 +303,7 @@
 				D88CDBB0198B4740008DCEFF /* Images.xcassets in Resources */,
 				D88CDBA2198B4740008DCEFF /* InfoPlist.strings in Resources */,
 				D88CDBAB198B4740008DCEFF /* Main.storyboard in Resources */,
+				D89EC4F4198CC6F10015166F /* ContentHTML.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +360,11 @@
 				D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */,
 				D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */,
 				D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */,
+				D89EC4EF198CBFD40015166F /* ZHContent.m in Sources */,
 				D88CDBCE198B48B2008DCEFF /* ZHClient.m in Sources */,
+				D89EC4EC198CB7C90015166F /* ZHDetailViewController.m in Sources */,
 				D88CDBA4198B4740008DCEFF /* main.m in Sources */,
+				D89EC4F2198CC61B0015166F /* ZHContentWebView.m in Sources */,
 				D88CDBDB198B52FB008DCEFF /* NSString+Date.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,10 +493,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZhihuDaily/ZhihuDaily-Prefix.pch";
 				INFOPLIST_FILE = "ZhihuDaily/ZhihuDaily-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -482,10 +510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZhihuDaily/ZhihuDaily-Prefix.pch";
 				INFOPLIST_FILE = "ZhihuDaily/ZhihuDaily-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
