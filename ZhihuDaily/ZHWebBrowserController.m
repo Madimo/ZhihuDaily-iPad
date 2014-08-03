@@ -220,7 +220,7 @@
 - (void)openInChrome:(id)sender
 {
     [[OpenInChromeController sharedInstance] openInChrome:self.webView.request.URL
-                                          withCallbackURL:[NSURL URLWithString:@"gather://"]
+                                          withCallbackURL:[NSURL URLWithString:@"zhihunews://"]
                                              createNewTab:NO];
 }
 

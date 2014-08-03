@@ -37,5 +37,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.Madimo.ZhihuDaily</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>zhihunews</string>
+				<string>zhihudaily</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
