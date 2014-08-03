@@ -42,6 +42,7 @@
     self.stories = [NSMutableDictionary new];
     
     self.refreshControl = [UIRefreshControl new];
+    self.refreshControl.tintColor = [UIColor lightGrayColor];
     [self.refreshControl addTarget:self
                             action:@selector(refreshStories)
                   forControlEvents:UIControlEventValueChanged];

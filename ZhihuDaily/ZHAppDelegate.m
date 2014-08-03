@@ -63,7 +63,6 @@
     UISwitch.appearance.onTintColor = [UIColor lightGrayColor];
     UITableViewCell.appearance.backgroundColor = nightModeContentBackgroundColor;
     UILabel.appearance.textColor = [UIColor lightGrayColor];
-    UIRefreshControl.appearance.tintColor = [UIColor whiteColor];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
@@ -79,7 +78,6 @@
     UISwitch.appearance.onTintColor = nil;
     UITableViewCell.appearance.backgroundColor = lightModeContentBackgroundColor;
     UILabel.appearance.textColor = nil;
-    UIRefreshControl.appearance.tintColor = [UIColor grayColor];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
