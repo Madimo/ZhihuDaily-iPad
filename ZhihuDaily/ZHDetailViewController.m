@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet ZHContentWebView *webview;
 @property (weak, nonatomic) IBOutlet UIView *loadingMaskView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) ZHContent *content;
 @end
@@ -25,6 +26,30 @@
 {
     self.splitViewController.delegate = self;
     [self.view bringSubviewToFront:self.loadingMaskView];
+}
+
+- (void)viewDidLoad
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(themeChanged:)
+                                                 name:kThemeChangedNotification
+                                               object:nil];
+    
+    [self.webview loadHTMLString:@"<body bgcolor=\"#343434\"></body>" baseURL:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self themeChanged:nil];
+}
+
+- (void)themeChanged:(NSNotification *)notification
+{
+    self.view.backgroundColor = nightMode ? nightModeContentBackgroundColor : lightModeContentBackgroundColor;
+
+    self.loadingMaskView.backgroundColor = nightMode ? [UIColor colorWithWhite:0.3 alpha:0.6] :
+                                                       [UIColor colorWithWhite:1.0 alpha:0.6];
+    self.activityIndicator.color = nightMode ? [UIColor whiteColor] : [UIColor grayColor];
 }
 
 - (void)setStory:(ZHStory *)story
@@ -48,6 +73,7 @@
                                       success:^(ZHContent *content) {
                                           self.content = content;
                                           [self.webview render:content];
+                                          self.webview.hidden = NO;
                                           self.actionButton.enabled = YES;
                                           self.loadingMaskView.hidden = YES;
                                       }

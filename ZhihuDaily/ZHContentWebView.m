@@ -62,6 +62,17 @@
     self.contentScript = [NSString stringWithContentsOfFile:path
                                                    encoding:NSUTF8StringEncoding
                                                       error:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(themeChanged:)
+                                                 name:kThemeChangedNotification
+                                               object:nil];
+}
+
+- (void)themeChanged:(NSNotification *)notification
+{
+    NSString *script = nightMode ? @"set_night_mode(true);" : @"set_night_mode(false);";
+    [self stringByEvaluatingJavaScriptFromString:script];
 }
 
 - (void)render:(ZHContent *)content
@@ -109,6 +120,14 @@
     
     [HTML replaceOccurrencesOfString:@"{{ javascript }}"
                           withString:self.contentScript
+                             options:NSLiteralSearch
+                               range:NSMakeRange(0, HTML.length)];
+    
+    // replace body_class
+    
+    NSString *classString = nightMode ? @"class=\"night\"" : @" ";
+    [HTML replaceOccurrencesOfString:@"{{ body_class }}"
+                          withString:classString
                              options:NSLiteralSearch
                                range:NSMakeRange(0, HTML.length)];
     

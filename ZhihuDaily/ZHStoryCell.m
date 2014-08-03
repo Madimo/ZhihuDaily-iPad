@@ -17,6 +17,39 @@
 
 @implementation ZHStoryCell
 
+- (void)awakeFromNib
+{
+    [self refreshColor];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(themeChanged:)
+                                                 name:kThemeChangedNotification
+                                               object:nil];
+}
+
+- (void)themeChanged:(NSNotification *)notification
+{
+    [self refreshColor];
+}
+
+- (void)refreshColor
+{
+    [self setSelected:self.selected animated:NO];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    
+    if (selected) {
+        self.contentView.backgroundColor = nightMode ? [UIColor darkGrayColor] : [UIColor colorWithRed:217.0 / 255.0
+                                                                                                 green:217.0 / 255.0
+                                                                                                  blue:217.0 / 255.0
+                                                                                                 alpha:1.0];
+    } else {
+        self.contentView.backgroundColor = [UIColor clearColor];
+    }
+}
+
 - (void)setStory:(ZHStory *)story
 {
     _story = story;

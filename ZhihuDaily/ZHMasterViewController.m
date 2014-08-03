@@ -16,6 +16,7 @@
 @interface ZHMasterViewController ()
 @property (weak, nonatomic) ZHDetailViewController *detailViewController;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *footerActivityIndicator;
+@property (strong, nonatomic) NSMutableArray *sectionHeaderViews;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) NSMutableArray *dates;
 @property (strong, nonatomic) NSMutableDictionary *stories;
@@ -30,6 +31,11 @@
     UINavigationController *nc = self.splitViewController.viewControllers.lastObject;
     self.detailViewController = nc.viewControllers.firstObject;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(themeChanged:)
+                                                 name:kThemeChangedNotification
+                                               object:nil];
+    
     self.clearsSelectionOnViewWillAppear = NO;
     
     self.dates = [NSMutableArray new];
@@ -42,6 +48,20 @@
     [self.tableView addSubview:self.refreshControl];
     
     [self refreshStories];
+}
+
+- (void)themeChanged:(NSNotification *)notification
+{
+    if (self.sectionHeaderViews) {
+        for (UIView *headerView in self.sectionHeaderViews) {
+            headerView.backgroundColor = nightMode ? [UIColor colorWithWhite:0.3 alpha:0.95] : [UIColor colorWithWhite:0.95 alpha:0.95];
+            
+            UILabel *label = headerView.subviews[0];
+            label.textColor = nightMode ? [UIColor lightGrayColor] : [UIColor blackColor];
+        }
+    }
+    
+    self.tableView.backgroundColor = nightMode ? nightModeContentBackgroundColor : lightModeContentBackgroundColor;
 }
 
 - (void)refreshStories
@@ -115,16 +135,21 @@
 {
     CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 30);
     UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.95];
+    view.backgroundColor = nightMode ? [UIColor colorWithWhite:0.3 alpha:0.95] : [UIColor colorWithWhite:0.95 alpha:0.95];
     
     UILabel *label = [[UILabel alloc] initWithFrame:view.bounds];
     label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = nightMode ? [UIColor lightGrayColor] : [UIColor blackColor];
 
     NSDate *date = [self.dates[section] toDate];
     NSString *weekdayString = [date weekdayString];
     label.text = [NSString stringWithFormat:@"%@・%@", [date toDisplayString], weekdayString];
     
+    if (!self.sectionHeaderViews) {
+        self.sectionHeaderViews = [NSMutableArray new];
+    }
     [view addSubview:label];
+    [self.sectionHeaderViews addObject:view];
     
     return view;
 }

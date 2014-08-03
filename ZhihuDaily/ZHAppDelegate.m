@@ -7,19 +7,94 @@
 //
 
 #import "ZHAppDelegate.h"
+#import "ZHStoryCell.h"
 #import <AFNetworkActivityIndicatorManager.h>
+
+@interface ZHAppDelegate ()
+@end
 
 @implementation ZHAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    lightModeContentBackgroundColor = [UIColor colorWithRed:249.0 / 255.0
+                                                      green:249.0 / 255.0
+                                                       blue:249.0 / 255.0
+                                                      alpha:1.0];
+    nightModeContentBackgroundColor = [UIColor colorWithRed:52.0 / 255.0
+                                                      green:52.0 / 255.0
+                                                       blue:52.0 / 255.0
+                                                      alpha:1.0];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    nightMode = [defaults boolForKey:kUDNightModeKey];
+    if (nightMode) {
+        [self switchToNightMode];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(themeChanged:)
+                                                 name:kThemeChangedNotification
+                                               object:nil];
     
     return YES;
 }
-							
+
+- (void)themeChanged:(NSNotification *)notification
+{
+    if (nightMode) {
+        [self switchToNightMode];
+    } else {
+        [self switchToLightMode];
+    }
+    [self refreshAppearance];
+}
+
+- (void)switchToNightMode
+{
+    UINavigationBar.appearance.barTintColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+    UINavigationBar.appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor lightGrayColor] };
+    UIBarButtonItem.appearance.tintColor = [UIColor whiteColor];
+    UITableView.appearance.backgroundColor = nightModeContentBackgroundColor;
+    UIWebView.appearance.backgroundColor = nightModeContentBackgroundColor;
+    UISwitch.appearance.thumbTintColor = [UIColor darkGrayColor];
+    UISwitch.appearance.onTintColor = [UIColor lightGrayColor];
+    UITableViewCell.appearance.backgroundColor = nightModeContentBackgroundColor;
+    UILabel.appearance.textColor = [UIColor lightGrayColor];
+    UIRefreshControl.appearance.tintColor = [UIColor whiteColor];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+- (void)switchToLightMode
+{
+    UINavigationBar.appearance.barTintColor = nil;
+    UINavigationBar.appearance.titleTextAttributes = nil;
+    UIBarButtonItem.appearance.tintColor = nil;
+    UITableView.appearance.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    UIWebView.appearance.backgroundColor = nil;
+    UISwitch.appearance.thumbTintColor = nil;
+    UISwitch.appearance.onTintColor = nil;
+    UITableViewCell.appearance.backgroundColor = lightModeContentBackgroundColor;
+    UILabel.appearance.textColor = nil;
+    UIRefreshControl.appearance.tintColor = [UIColor grayColor];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+}
+
+- (void)refreshAppearance
+{
+    NSArray *windows = [UIApplication sharedApplication].windows;
+    for (UIWindow *window in windows) {
+        for (UIView *view in window.subviews) {
+            [view removeFromSuperview];
+            [window addSubview:view];
+        }
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
