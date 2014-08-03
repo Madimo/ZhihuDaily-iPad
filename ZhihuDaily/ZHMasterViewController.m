@@ -30,6 +30,8 @@
     UINavigationController *nc = self.splitViewController.viewControllers.lastObject;
     self.detailViewController = nc.viewControllers.firstObject;
     
+    self.clearsSelectionOnViewWillAppear = NO;
+    
     self.dates = [NSMutableArray new];
     self.stories = [NSMutableDictionary new];
     
