@@ -51,6 +51,11 @@
     [self refreshStories];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)themeChanged:(NSNotification *)notification
 {
     if (self.sectionHeaderViews) {

@@ -69,6 +69,11 @@
                                                object:nil];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)themeChanged:(NSNotification *)notification
 {
     NSString *script = nightMode ? @"set_night_mode(true);" : @"set_night_mode(false);";

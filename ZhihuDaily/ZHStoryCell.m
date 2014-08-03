@@ -26,6 +26,11 @@
                                                object:nil];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)themeChanged:(NSNotification *)notification
 {
     [self refreshColor];

@@ -42,6 +42,11 @@
     return YES;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)themeChanged:(NSNotification *)notification
 {
     if (nightMode) {

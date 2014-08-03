@@ -43,6 +43,11 @@
     [self themeChanged:nil];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)themeChanged:(NSNotification *)notification
 {
     self.view.backgroundColor = nightMode ? nightModeContentBackgroundColor : lightModeContentBackgroundColor;
