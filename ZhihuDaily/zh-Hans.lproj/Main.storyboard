@@ -55,8 +55,15 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="PzK-O1-Ign"/>
+                    <navigationItem key="navigationItem" id="PzK-O1-Ign">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="action" id="1aE-Ph-QO3">
+                            <connections>
+                                <action selector="openAction:" destination="AdS-73-MvU" id="zBd-Y8-y4l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="actionButton" destination="1aE-Ph-QO3" id="MGi-vh-sKv"/>
                         <outlet property="loadingMaskView" destination="hsi-4m-Sws" id="AeZ-5i-TNl"/>
                         <outlet property="webview" destination="Xd2-xT-JF1" id="RXW-uq-79R"/>
                     </connections>

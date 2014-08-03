@@ -14,6 +14,7 @@
 @interface ZHDetailViewController () <UISplitViewControllerDelegate, UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet ZHContentWebView *webview;
 @property (weak, nonatomic) IBOutlet UIView *loadingMaskView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @property (strong, nonatomic) ZHContent *content;
 @end
@@ -40,17 +41,34 @@
     self.loadingMaskView.hidden = NO;
     
     [self.task cancel];
+    self.actionButton.enabled = NO;
     
     ZHClient *client = [ZHClient client];
     self.task = [client getContentWithStoryId:self.story.storyId
                                       success:^(ZHContent *content) {
                                           self.content = content;
                                           [self.webview render:content];
+                                          self.actionButton.enabled = YES;
                                           self.loadingMaskView.hidden = YES;
                                       }
                                       failure:^(NSError *error) {
                                           self.loadingMaskView.hidden = YES;
                                       }];
+}
+
+- (IBAction)openAction:(id)sender
+{
+    NSArray *activityItems = @[[NSString stringWithFormat:@"%@ （分享自 @知乎日报）", self.content.title],
+                               [NSURL URLWithString:self.content.shareUrl]];
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                                                      applicationActivities:nil];
+    UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:avc];
+    [popover presentPopoverFromBarButtonItem:self.actionButton
+                    permittedArrowDirections:UIPopoverArrowDirectionUp
+                                    animated:YES];
+    [avc setCompletionHandler:^(NSString *activityType, BOOL completed){
+        [popover dismissPopoverAnimated:YES];
+    }];
 }
 
 #pragma mark - UIWebViewDelegate

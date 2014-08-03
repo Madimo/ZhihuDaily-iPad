@@ -17,7 +17,14 @@
         self.type = [dict[@"type"] integerValue];
         self.storyId = [NSString stringWithFormat:@"%@", dict[@"id"]];
         self.title = dict[@"title"];
+        
+        // convert share link to faceair's zhihudaily.net
         self.shareUrl = dict[@"share_url"];
+        if ([self.shareUrl hasPrefix:@"http://daily.zhihu.com/"]) {
+            self.shareUrl = [self.shareUrl stringByReplacingOccurrencesOfString:@"http://daily.zhihu.com/"
+                                                                     withString:@"http://www.zhihudaily.net/"];
+        }
+        
         self.gaPrefix = dict[@"ga_prefix"];
         
         NSMutableArray *csses = [NSMutableArray new];
