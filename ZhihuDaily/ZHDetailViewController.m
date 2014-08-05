@@ -34,8 +34,6 @@
                                              selector:@selector(themeChanged:)
                                                  name:kThemeChangedNotification
                                                object:nil];
-    
-    [self.webview loadHTMLString:@"<body bgcolor=\"#343434\"></body>" baseURL:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -55,6 +53,12 @@
     self.loadingMaskView.backgroundColor = nightMode ? [UIColor colorWithWhite:0.3 alpha:0.6] :
                                                        [UIColor colorWithWhite:1.0 alpha:0.6];
     self.activityIndicator.color = nightMode ? [UIColor whiteColor] : [UIColor grayColor];
+    
+    if (!self.story) {
+        if (nightMode) {
+            [self.webview loadHTMLString:@"<body bgcolor=\"#343434\"></body>" baseURL:nil];
+        }
+    }
 }
 
 - (void)setStory:(ZHStory *)story
