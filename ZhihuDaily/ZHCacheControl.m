@@ -43,6 +43,19 @@
     }
 }
 
+- (NSInteger)readCount
+{
+    return self.readList.count;
+}
+
+- (void)clearAllReadMark
+{
+    [self.readList removeAllObjects];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:kUDReadListKey];
+    [defaults synchronize];
+}
+
 #pragma mark - Singleton
 
 + (instancetype)cacheControl

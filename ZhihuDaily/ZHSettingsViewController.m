@@ -7,12 +7,15 @@
 //
 
 #import "ZHSettingsViewController.h"
+#import "ZHCacheControl.h"
 
 #define kActionSheetTagClearCache 1
+#define kActionSheetTagClearReadMark 2
 
 @interface ZHSettingsViewController () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *nightModeSwitch;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cacheCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *readMarkCell;
 @property (strong, nonatomic) UITapGestureRecognizer *gestureRecognizer;
 @property (strong, nonatomic) NSUserDefaults *defaults;
 @end
@@ -25,6 +28,7 @@
     self.nightModeSwitch.on = [self.defaults boolForKey:kUDNightModeKey];
     
     [self reloadCacheUsage];
+    [self reloadReadMark];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -61,6 +65,18 @@
     [self reloadCacheUsage];
 }
 
+- (void)reloadReadMark
+{
+    NSString *text = [NSString stringWithFormat:@"共 %@ 个项目", @([ZHCacheControl cacheControl].readCount)];
+    self.readMarkCell.detailTextLabel.text = text;
+}
+
+- (void)clearReadMark
+{
+    [[ZHCacheControl cacheControl] clearAllReadMark];
+    [self reloadReadMark];
+}
+
 #pragma mark - UITableViewDelegate
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,6 +101,15 @@
             [sheet showInView:self.cacheCell];
             break;
         }
+        case 2: {
+            UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"清除所有已读标记"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"取消"
+                                                 destructiveButtonTitle:@"清除所有已读标记"
+                                                      otherButtonTitles:nil];
+            sheet.tag = kActionSheetTagClearReadMark;
+            [sheet showInView:self.cacheCell];
+        }
         default:
             break;
     }
@@ -100,8 +125,14 @@
         return;
     }
     
-    if (actionSheet.tag == kActionSheetTagClearCache) {
-        [self clearCache];
+    switch (actionSheet.tag) {
+        case kActionSheetTagClearCache:
+            [self clearCache];
+            break;
+        case kActionSheetTagClearReadMark:
+            [self clearReadMark];
+        default:
+            break;
     }
 }
 

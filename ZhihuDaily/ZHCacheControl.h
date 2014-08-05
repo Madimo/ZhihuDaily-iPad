@@ -12,9 +12,12 @@
 
 @interface ZHCacheControl : NSObject
 
+@property (nonatomic, readonly) NSInteger readCount;
+
 + (instancetype)cacheControl;
 
 - (BOOL)isRead:(ZHStory *)story;
 - (void)setRead:(ZHStory *)story;
+- (void)clearAllReadMark;
 
 @end
