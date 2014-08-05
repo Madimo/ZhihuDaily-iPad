@@ -8,10 +8,10 @@
 
 #import "ZHKeyDefines.h"
 
-NSString *const kUDNightModeKey = @"NightMode";
-NSString *const kUDReadListKey = @"ReadList";
+NSString *const kUDNightModeKey = @"com.Madimo.ZhihuDaily.NightMode";
+NSString *const kUDReadListKey = @"com.Madimo.ZhihuDaily.ReadList";
 
-NSString *const kThemeChangedNotification = @"ThemeChangedNotification";
+NSString *const kThemeChangedNotification = @"com.Madimo.ZhihuDaily.ThemeChangedNotification";
 
 BOOL nightMode = NO;
 
