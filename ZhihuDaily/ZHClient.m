@@ -93,7 +93,6 @@
                                          success:(void (^)(NSString *date, NSArray *stories))success
                                          failure:(void (^)(NSError *error))failure
 {
-    NSLog(@"%@", [NSString stringWithFormat:@"/news/before/%@", date]);
     return [self getPath:[NSString stringWithFormat:@"/news/before/%@", date]
               parameters:nil
                  success:^(NSURLSessionDataTask *task, NSDictionary *responseDict) {
