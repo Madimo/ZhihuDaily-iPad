@@ -82,6 +82,19 @@
         [self.stories setObject:stories forKey:date];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+            
+            if (self.detailViewController.story) {
+                for (ZHStory *story in stories) {
+                    if ([story.storyId isEqualToString:self.detailViewController.story.storyId]) {
+                        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[stories indexOfObject:story] inSection:0];
+                        [self.tableView selectRowAtIndexPath:indexPath
+                                                    animated:NO
+                                              scrollPosition:UITableViewScrollPositionNone];
+                        break;
+                    }
+                }
+            }
+            
             [self.refreshControl endRefreshing];
         });
     }
