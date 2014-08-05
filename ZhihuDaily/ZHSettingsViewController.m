@@ -67,7 +67,7 @@
 
 - (void)reloadReadMark
 {
-    NSString *text = [NSString stringWithFormat:@"共 %@ 个项目", @([ZHCacheControl cacheControl].readCount)];
+    NSString *text = [NSString stringWithFormat:@"共 %@ 个标记", @([ZHCacheControl cacheControl].readCount)];
     self.readMarkCell.detailTextLabel.text = text;
 }
 
