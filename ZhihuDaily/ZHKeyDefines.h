@@ -8,6 +8,7 @@
 
 
 extern NSString *const kUDNightModeKey;
+extern NSString *const kUDReadListKey;
 
 extern NSString *const kThemeChangedNotification;
 

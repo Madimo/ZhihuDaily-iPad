@@ -7,6 +7,7 @@
 //
 
 #import "ZHStoryCell.h"
+#import "ZHCacheControl.h"
 #import "ZHStory.h"
 
 @interface ZHStoryCell ()
@@ -46,6 +47,11 @@
     [super setSelected:selected animated:animated];
     
     if (selected) {
+        [[ZHCacheControl cacheControl] setRead:self.story];
+        self.titleLabel.alpha = 0.5;
+    }
+    
+    if (selected) {
         self.contentView.backgroundColor = nightMode ? [UIColor darkGrayColor] : [UIColor colorWithRed:217.0 / 255.0
                                                                                                  green:217.0 / 255.0
                                                                                                   blue:217.0 / 255.0
@@ -60,6 +66,11 @@
     _story = story;
     
     self.titleLabel.text = story.title;
+    if ([[ZHCacheControl cacheControl] isRead:story]) {
+        self.titleLabel.alpha = 0.5;
+    } else {
+        self.titleLabel.alpha = 1.0;
+    }
     
     if (story.imageUrls.count) {
         NSURL *url = [NSURL URLWithString:story.imageUrls[0]];

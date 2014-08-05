@@ -32,6 +32,7 @@
 		D89EC505198D4D7E0015166F /* ZHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC504198D4D7E0015166F /* ZHDetailViewController.m */; };
 		D89EC508198E14D50015166F /* ZHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC507198E14D50015166F /* ZHSettingsViewController.m */; };
 		D89EC50B198E16090015166F /* ZHKeyDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC50A198E16090015166F /* ZHKeyDefines.m */; };
+		D8EFE6051991018600B03633 /* ZHCacheControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EFE6041991018600B03633 /* ZHCacheControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,8 @@
 		D89EC507198E14D50015166F /* ZHSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHSettingsViewController.m; sourceTree = "<group>"; };
 		D89EC509198E16090015166F /* ZHKeyDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHKeyDefines.h; sourceTree = "<group>"; };
 		D89EC50A198E16090015166F /* ZHKeyDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHKeyDefines.m; sourceTree = "<group>"; };
+		D8EFE6031991018600B03633 /* ZHCacheControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCacheControl.h; sourceTree = "<group>"; };
+		D8EFE6041991018600B03633 /* ZHCacheControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCacheControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				D88CDBD0198B4932008DCEFF /* ZHStory.m */,
 				D89EC4ED198CBFD40015166F /* ZHContent.h */,
 				D89EC4EE198CBFD40015166F /* ZHContent.m */,
+				D8EFE6031991018600B03633 /* ZHCacheControl.h */,
+				D8EFE6041991018600B03633 /* ZHCacheControl.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			files = (
 				D88CDBA8198B4740008DCEFF /* ZHAppDelegate.m in Sources */,
 				D88CDBD5198B49BF008DCEFF /* ZHMasterViewController.m in Sources */,
+				D8EFE6051991018600B03633 /* ZHCacheControl.m in Sources */,
 				D88CDBD1198B4932008DCEFF /* ZHStory.m in Sources */,
 				D88CDBDE198B5532008DCEFF /* NSDate+String.m in Sources */,
 				D88CDBD8198B49E3008DCEFF /* ZHStoryCell.m in Sources */,

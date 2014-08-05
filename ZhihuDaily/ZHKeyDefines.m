@@ -9,6 +9,7 @@
 #import "ZHKeyDefines.h"
 
 NSString *const kUDNightModeKey = @"NightMode";
+NSString *const kUDReadListKey = @"ReadList";
 
 NSString *const kThemeChangedNotification = @"ThemeChangedNotification";
 
