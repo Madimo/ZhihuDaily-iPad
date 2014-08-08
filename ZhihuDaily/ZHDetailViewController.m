@@ -111,9 +111,14 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString *url = request.URL.absoluteString;
+    NSLog(@"%@", url);
     
     if ([url isEqualToString:@"about:blank"]) {
         return YES;
+    }
+    
+    if ([url isEqualToString:@"zhihunews:loadimg"]) {
+        return NO;
     }
     
     ZHWebBrowserController *wbc = [[ZHWebBrowserController alloc] initWithURL:url];

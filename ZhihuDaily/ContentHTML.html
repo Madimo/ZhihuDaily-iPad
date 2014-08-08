@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>知乎日报</title>
         
         <style>
             {{ stylesheet }}
@@ -20,7 +21,7 @@
         </script>
         
     </head>
-    <body {{ body_class }}>
+    <body {{ body_class }} onload="init_img()">
         {{ body }}
     </body>
 </html>

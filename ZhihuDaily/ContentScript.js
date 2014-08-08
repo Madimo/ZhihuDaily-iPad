@@ -17,7 +17,8 @@
         return 'c';
     };
 
-    window.img_click = function (img) {
+    window.img_click = function () {
+        var img = this;
         if (img.className.indexOf('avatar') >= 0) {
             return;
         }
@@ -26,7 +27,9 @@
         window.location = "zhihunews:loadimg";
     };
 
-    window.img_error = function (img) {
+    window.img_error = function () {
+        var img = this;
+ 
         if (img.className.indexOf('avatar') >= 0) {
             return;
         }
@@ -54,6 +57,14 @@
         img.parentElement.removeChild(img);
         img.style.display = 'none';
         placeholder.appendChild(img);
+    };
+ 
+    window.init_img = function() {
+        var imgs = document.getElementsByTagName("img");
+        for (var i = 0; i < imgs.length; ++i) {
+            imgs[i].onclick = img_click;
+            imgs[i].onerror = img_error;
+        }
     };
 
     window.set_night_mode = function(enabled) {
