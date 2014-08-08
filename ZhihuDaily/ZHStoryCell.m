@@ -64,7 +64,7 @@
 - (void)setStory:(ZHStory *)story
 {
     _story = story;
-    
+
     self.titleLabel.text = story.title;
     if ([[ZHCacheControl cacheControl] isRead:story]) {
         self.titleLabel.alpha = 0.5;
@@ -80,7 +80,7 @@
         self.titleLabel.frame = frame;
         self.storyImageView.hidden = NO;
     } else {
-        CGRect frame = CGRectMake(10, 10, 312.0, 75.0);
+        CGRect frame = CGRectMake(10, 10, 304.0, 75.0);
         self.titleLabel.frame = frame;
         self.storyImageView.hidden = YES;
     }
