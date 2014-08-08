@@ -55,13 +55,17 @@
 
 - (void)reloadCacheUsage
 {
-    NSInteger currentDiskUsage = [NSURLCache sharedURLCache].currentDiskUsage;
+    NSInteger currentDiskUsage = 0;
+    currentDiskUsage += [NSURLCache sharedURLCache].currentDiskUsage;
+    currentDiskUsage += [[SDImageCache sharedImageCache] getSize];
+    
     self.cacheCell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f MB", currentDiskUsage / 1024.0 / 1024.0];
 }
 
 - (void)clearCache
 {
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    [[SDImageCache sharedImageCache] clearDisk];
     [self reloadCacheUsage];
 }
 
