@@ -124,7 +124,7 @@
                                NSInteger section = self.dates.count - 1;
                                NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
                                dispatch_async(dispatch_get_main_queue(), ^{
-                                   [self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+                                   [self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
                                    [self.footerActivityIndicator stopAnimating];
                                });
                            }
