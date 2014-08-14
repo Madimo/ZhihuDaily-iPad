@@ -74,6 +74,7 @@
             $('body').removeClass('night');
         }
     };
+ 
     window.update = function(info) {
         if (!info) return;
         var $theme;

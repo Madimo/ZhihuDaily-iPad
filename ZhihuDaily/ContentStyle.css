@@ -139,7 +139,6 @@ ol {
 }
 .headline {
   border-bottom: 4px solid #f6f6f6;
-  display: none;
 }
 .headline-title.onlyheading {
   margin: 20px 0;
@@ -354,6 +353,7 @@ ol {
 }
 .headline .img-place-holder {
   height: 200px;
+  display: none;
 }
 .from-column {
   width: 280px;
