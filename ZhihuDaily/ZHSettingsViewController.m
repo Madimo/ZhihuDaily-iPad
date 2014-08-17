@@ -38,8 +38,16 @@
                                                                          action:@selector(handleTapGesture:)];
         self.gestureRecognizer.numberOfTapsRequired = 1;
         self.gestureRecognizer.cancelsTouchesInView = NO;
+    }
+    
+    if (![self.view.window.gestureRecognizers containsObject:self.gestureRecognizer]) {
         [self.view.window addGestureRecognizer:self.gestureRecognizer];
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.view.window removeGestureRecognizer:self.gestureRecognizer];
 }
 
 - (IBAction)nightModeChanged:(id)sender
@@ -85,7 +93,7 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == 0) {
         return nil;
     }
     

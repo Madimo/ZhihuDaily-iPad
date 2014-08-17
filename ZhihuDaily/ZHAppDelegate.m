@@ -60,6 +60,7 @@
 - (void)switchToNightMode
 {
     UINavigationBar.appearance.barTintColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+    UINavigationBar.appearance.tintColor = [UIColor whiteColor];
     UINavigationBar.appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor lightGrayColor] };
     UIBarButtonItem.appearance.tintColor = [UIColor whiteColor];
     UITableView.appearance.backgroundColor = nightModeContentBackgroundColor;
@@ -75,6 +76,7 @@
 - (void)switchToLightMode
 {
     UINavigationBar.appearance.barTintColor = nil;
+    UINavigationBar.appearance.tintColor = nil;
     UINavigationBar.appearance.titleTextAttributes = nil;
     UIBarButtonItem.appearance.tintColor = nil;
     UITableView.appearance.backgroundColor = [UIColor groupTableViewBackgroundColor];
