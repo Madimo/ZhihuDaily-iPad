@@ -132,6 +132,7 @@
 		D88CDB9D198B4740008DCEFF /* ZhihuDaily */ = {
 			isa = PBXGroup;
 			children = (
+				D8CE959219A11C74001E02A1 /* WebSource */,
 				D898C947199140310052A555 /* Applications */,
 				D89EC4FB198D21150015166F /* Libraries */,
 				D88CDBE2198B5BA5008DCEFF /* Categories */,
@@ -150,9 +151,6 @@
 		D88CDB9E198B4740008DCEFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D89EC4F3198CC6F10015166F /* ContentHTML.html */,
-				D89EC4F5198D08490015166F /* ContentStyle.css */,
-				D89EC4F7198D0DA30015166F /* ContentScript.js */,
 				D88CDB9F198B4740008DCEFF /* ZhihuDaily-Info.plist */,
 				D88CDBA0198B4740008DCEFF /* InfoPlist.strings */,
 				D88CDBA3198B4740008DCEFF /* main.m */,
@@ -229,6 +227,16 @@
 				D89EC501198D24F60015166F /* ZHWebBrowserController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D8CE959219A11C74001E02A1 /* WebSource */ = {
+			isa = PBXGroup;
+			children = (
+				D89EC4F3198CC6F10015166F /* ContentHTML.html */,
+				D89EC4F5198D08490015166F /* ContentStyle.css */,
+				D89EC4F7198D0DA30015166F /* ContentScript.js */,
+			);
+			name = WebSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
