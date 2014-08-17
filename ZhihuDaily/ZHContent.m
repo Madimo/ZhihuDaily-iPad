@@ -42,7 +42,7 @@
         if (self.type == 0) {
             self.body = dict[@"body"];
             self.imageSource = dict[@"image_source"];
-            self.imageUrl = dict[@"image_url"];
+            self.imageUrl = dict[@"image"];
         } else if (self.type == 1) {
             self.themeName = dict[@"theme_name"];
             self.editorName = dict[@"editorName"];
