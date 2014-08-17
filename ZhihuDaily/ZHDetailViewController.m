@@ -84,7 +84,6 @@
                                           [self.webview render:content];
                                           self.webview.hidden = NO;
                                           self.actionButton.enabled = YES;
-                                          self.loadingMaskView.hidden = YES;
                                       }
                                       failure:^(NSError *error) {
                                           self.loadingMaskView.hidden = YES;
@@ -118,6 +117,18 @@
     }
     
     if ([url isEqualToString:@"zhihunews:loadimg"]) {
+        return NO;
+    }
+    
+    if ([url isEqualToString:@"zhihunews:body_loaded"]) {
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             self.loadingMaskView.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             self.loadingMaskView.hidden = YES;
+                             self.loadingMaskView.alpha = 1.0;
+                         }];
         return NO;
     }
     

@@ -72,6 +72,8 @@
         if (!headlineBackground[0]) {
             $('div.headline').css('border-bottom', '0px');
         }
+ 
+        window.location = "zhihunews:body_loaded";
     };
 
     window.set_night_mode = function(enabled) {
