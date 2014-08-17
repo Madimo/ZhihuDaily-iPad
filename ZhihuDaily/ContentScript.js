@@ -59,11 +59,18 @@
         placeholder.appendChild(img);
     };
  
-    window.init_img = function() {
+    window.body_onload = function() {
+        // init img
         var imgs = document.getElementsByTagName("img");
         for (var i = 0; i < imgs.length; ++i) {
             imgs[i].onclick = img_click;
             imgs[i].onerror = img_error;
+        }
+ 
+        // delete bottom border when headline-background not found
+        var headlineBackground = $('div.headline div.headline-background');
+        if (!headlineBackground[0]) {
+            $('div.headline').css('border-bottom', '0px');
         }
     };
 
