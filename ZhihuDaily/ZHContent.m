@@ -22,7 +22,7 @@
         self.shareUrl = dict[@"share_url"];
         if ([self.shareUrl hasPrefix:@"http://daily.zhihu.com/"]) {
             self.shareUrl = [self.shareUrl stringByReplacingOccurrencesOfString:@"http://daily.zhihu.com/"
-                                                                     withString:@"http://www.zhihudaily.net/"];
+                                                                     withString:@"http://zhihudaily.net/"];
         }
         
         self.gaPrefix = dict[@"ga_prefix"];
