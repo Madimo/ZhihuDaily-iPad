@@ -120,7 +120,7 @@
         return NO;
     }
     
-    if ([url isEqualToString:@"zhihunews:body_loaded"]) {
+    if ([url isEqualToString:@"zhihunews:ready"]) {
         [UIView animateWithDuration:0.3
                          animations:^{
                              self.loadingMaskView.alpha = 0.0;

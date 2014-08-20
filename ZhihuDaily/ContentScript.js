@@ -72,9 +72,11 @@
         if (!headlineBackground[0]) {
             $('div.headline').css('border-bottom', '0px');
         }
- 
-        window.location = "zhihunews:body_loaded";
     };
+ 
+    $(document).ready(function() {
+        window.location = "zhihunews:ready";
+    });
 
     window.set_night_mode = function(enabled) {
         if (enabled) {
