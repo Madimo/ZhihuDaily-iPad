@@ -112,6 +112,10 @@
     NSString *url = request.URL.absoluteString;
     NSLog(@"%@", url);
     
+    if ([url hasPrefix:@"file:///"]) {
+        return YES;
+    }
+    
     if ([url isEqualToString:@"about:blank"]) {
         return YES;
     }

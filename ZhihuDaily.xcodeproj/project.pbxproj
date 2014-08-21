@@ -32,6 +32,7 @@
 		D89EC505198D4D7E0015166F /* ZHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC504198D4D7E0015166F /* ZHDetailViewController.m */; };
 		D89EC508198E14D50015166F /* ZHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC507198E14D50015166F /* ZHSettingsViewController.m */; };
 		D89EC50B198E16090015166F /* ZHKeyDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EC50A198E16090015166F /* ZHKeyDefines.m */; };
+		D8BC37FD19A64B65005AE8DB /* jquery-2.1.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = D8BC37FB19A64B2E005AE8DB /* jquery-2.1.0.min.js */; };
 		D8EFE6051991018600B03633 /* ZHCacheControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EFE6041991018600B03633 /* ZHCacheControl.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		D89EC507198E14D50015166F /* ZHSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHSettingsViewController.m; sourceTree = "<group>"; };
 		D89EC509198E16090015166F /* ZHKeyDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHKeyDefines.h; sourceTree = "<group>"; };
 		D89EC50A198E16090015166F /* ZHKeyDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHKeyDefines.m; sourceTree = "<group>"; };
+		D8BC37FB19A64B2E005AE8DB /* jquery-2.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.0.min.js"; sourceTree = "<group>"; };
 		D8EFE6031991018600B03633 /* ZHCacheControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHCacheControl.h; sourceTree = "<group>"; };
 		D8EFE6041991018600B03633 /* ZHCacheControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHCacheControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +237,7 @@
 				D89EC4F3198CC6F10015166F /* ContentHTML.html */,
 				D89EC4F5198D08490015166F /* ContentStyle.css */,
 				D89EC4F7198D0DA30015166F /* ContentScript.js */,
+				D8BC37FB19A64B2E005AE8DB /* jquery-2.1.0.min.js */,
 			);
 			name = WebSource;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BC37FD19A64B65005AE8DB /* jquery-2.1.0.min.js in Resources */,
 				D88CDBB0198B4740008DCEFF /* Images.xcassets in Resources */,
 				D88CDBA2198B4740008DCEFF /* InfoPlist.strings in Resources */,
 				D88CDBAB198B4740008DCEFF /* Main.storyboard in Resources */,

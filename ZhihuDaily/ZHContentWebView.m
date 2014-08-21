@@ -144,7 +144,7 @@
                                range:NSMakeRange(0, HTML.length)];
     
     // load
-    [self loadHTMLString:HTML baseURL:nil];
+    [self loadHTMLString:HTML baseURL:[NSBundle mainBundle].resourceURL];
 }
 
 @end
