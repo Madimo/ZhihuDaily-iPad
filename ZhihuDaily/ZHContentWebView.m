@@ -85,51 +85,18 @@
     NSMutableString *HTML = [self.contentHTML mutableCopy];
     
     // replace css
-    
-//    NSMutableString *cssString;
-//
-//    if (content.css.count) {
-//        cssString = [NSMutableString new];
-//        for (NSString *url in content.css) {
-//            static NSString *linkString = @"<link rel=\"stylesheet\" type=\"text/css\" href=\"%@\" />\n";
-//            [cssString appendFormat:linkString, url];
-//        }
-//    }
-//    
-//    [HTML replaceOccurrencesOfString:@"{{ stylesheet }}"
-//                          withString:cssString ? cssString : @" "
-//                             options:NSLiteralSearch
-//                               range:NSMakeRange(0, HTML.length)];
-    
     [HTML replaceOccurrencesOfString:@"{{ stylesheet }}"
                           withString:self.contentStyle
                              options:NSLiteralSearch
                                range:NSMakeRange(0, HTML.length)];
     
     // replace javascript
-    
-//    NSMutableString *jsString;
-//    
-//    if (content.js.count) {
-//        jsString = [NSMutableString new];
-//        for (NSString *url in content.js) {
-//            static NSString *linkString = @"<script type=\"text/javascript\" src=\"%@\"></script>\n";
-//            [jsString appendFormat:linkString, url];
-//        }
-//    }
-//    
-//    [HTML replaceOccurrencesOfString:@"{{ javascript }}"
-//                          withString:jsString ? jsString : @" "
-//                             options:NSLiteralSearch
-//                               range:NSMakeRange(0, HTML.length)];
-    
     [HTML replaceOccurrencesOfString:@"{{ javascript }}"
                           withString:self.contentScript
                              options:NSLiteralSearch
                                range:NSMakeRange(0, HTML.length)];
     
     // replace body_class
-    
     NSString *classString = nightMode ? @"class=\"night\"" : @" ";
     [HTML replaceOccurrencesOfString:@"{{ body_class }}"
                           withString:classString
@@ -137,7 +104,6 @@
                                range:NSMakeRange(0, HTML.length)];
     
     // replace body
-    
     [HTML replaceOccurrencesOfString:@"{{ body }}"
                           withString:content.body
                              options:NSLiteralSearch
