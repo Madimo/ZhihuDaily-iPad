@@ -149,7 +149,7 @@
    shouldHideViewController:(UIViewController *)vc
               inOrientation:(UIInterfaceOrientation)orientation
 {
-    return UIInterfaceOrientationIsPortrait(orientation);
+    return NO;
 }
 
 - (void)splitViewController:(UISplitViewController *)svc
